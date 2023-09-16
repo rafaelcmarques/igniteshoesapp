@@ -7,14 +7,16 @@ import { Routes } from './src/routes';
 
 import { THEME } from './src/theme';
 import { Loading } from './src/components/Loading';
+import { tagUserInfoCreate } from './src/notifications/notificationsTag';
 
 import { CartContextProvider } from './src/contexts/CartContext';
 
-OneSignal.setAppId("bdb1d805-de1f-4c86-a6a9-3f543a0c072e");
+OneSignal.setEmail('rafael@email.com')
+OneSignal.setAppId("60077e73-96c0-44e2-8079-d0988b54dc11");
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
-
+  tagUserInfoCreate()
 
   return (
     <NativeBaseProvider theme={THEME}>
