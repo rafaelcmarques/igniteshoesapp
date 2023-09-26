@@ -13,6 +13,8 @@ import { Button } from '../components/Button';
 import { ScreenHeader } from '../components/ScreenHeader';
 import { ProductCardProps } from '../components/ProductCard';
 
+
+
 type RouteParamsProps = {
   productId: string;
 }
@@ -58,6 +60,7 @@ export function Details() {
   useEffect(() => {
     const selected = PRODUCTS.filter(item => item.id === productId)[0] as ProductCardProps;
     setProduct(selected);
+    
   }, [productId]);
 
   return (
